@@ -52,7 +52,7 @@ class AuthController extends Controller
         Auth::login($user);
 
         // Redireciona o usuário para a página de dashboard
-        return redirect('/dashboard');
+        return redirect('/home');
     }
 
     public function logout()

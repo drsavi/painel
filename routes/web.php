@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 
@@ -21,5 +22,6 @@ Route::post('/login', [AuthController::class, 'processLogin']);
 Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [AuthController::class, 'processRegistration'])->name('register');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/home', [HomeController::class, 'showHomePage'])->name('home');
 
 
