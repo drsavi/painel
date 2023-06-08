@@ -21,13 +21,13 @@
 
     <nav class="navbar navbar-dark border border-bottom-dark w-100 m-0 p-0">
     <div class="d-flex flex-column w-100 justify-content-end bg-light p-0" id="navbarCollapse">
-            
+
         <div class="bg-dark">
         <a id="navbar" class="navbar-brand d-flex align-items-left" href="#">
             <img src="/assets/images/logo/logo.png" width="30" height="30" class="d-inline-block align-top p-" alt="Q">uestor
         </a>
         </div>
-        
+
         <div id="navbar" class="p-0 mt-0 mb-0 px-lg-0 bg-light w-100 mb-0 d-flex align-items-center">
         <a class="nav-link" href="#">
             <img src="/assets/images/ico/la-home.png" width="16" height="16" class="d-inline-block" alt=""><i class="text-black">- Início</i>
@@ -35,7 +35,7 @@
         </div>
     </div>
     </nav>
-
+    
     <main>
         <div class="">Hi Home</div>
         <div>
