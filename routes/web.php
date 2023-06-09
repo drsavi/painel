@@ -32,5 +32,7 @@ Route::get('/extratos', [ExtratoController::class, 'showExtratosPage'])->name('e
 Route::get('/capturas', [CapturaController::class, 'showCapturasPage'])->name('capturas');
 Route::get('/clientes', [ClienteController::class, 'showClientesPage'])->name('clientes');
 Route::get('/usuarios', [UsuarioController::class, 'showUsuariosPage'])->name('usuarios');
+Route::get('/usuarios/cadastrar', [UsuarioController::class, 'showCadastrarUsuariosPage'])->name('usuarios/cadastrar');
+Route::post('/usuarios/cadastrar', [UsuarioController::class, 'processCadastrarUsuarios'])->name('usuarios/cadastrar');
 
 
