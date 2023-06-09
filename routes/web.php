@@ -20,9 +20,9 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-Route::get('/', function () {return view('auth.login');});
-Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
-Route::post('/login', [AuthController::class, 'processLogin']);
+Route::get('/', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/', [AuthController::class, 'processLogin']);
+
 Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [AuthController::class, 'processRegistration'])->name('register');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
@@ -31,6 +31,8 @@ Route::get('/home', [HomeController::class, 'showHomePage'])->name('home');
 Route::get('/extratos', [ExtratoController::class, 'showExtratosPage'])->name('extratos');
 Route::get('/capturas', [CapturaController::class, 'showCapturasPage'])->name('capturas');
 Route::get('/clientes', [ClienteController::class, 'showClientesPage'])->name('clientes');
+
+
 Route::get('/usuarios', [UsuarioController::class, 'showUsuariosPage'])->name('usuarios');
 Route::get('/usuarios/cadastrar', [UsuarioController::class, 'showCadastrarUsuariosPage'])->name('usuarios/cadastrar');
 Route::post('/usuarios/cadastrar', [UsuarioController::class, 'processCadastrarUsuarios'])->name('usuarios/cadastrar');

@@ -11,7 +11,9 @@ class UsuarioController extends Controller
 {
     public function showUsuariosPage()
     {
-        return view('screens.usuarios');
+        $usuarios = User::all(); // Obtenha os usuários do banco de dados ou de qualquer outra fonte
+
+        return view('screens.usuarios', ['usuarios' => $usuarios]);
     }
 
     public function showCadastrarUsuariosPage()
@@ -43,4 +45,6 @@ class UsuarioController extends Controller
         // Redireciona o usuário para a página de dashboard
         return redirect('/usuarios');
     }
+
+
 }
