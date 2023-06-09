@@ -1,0 +1,25 @@
+
+#navbar {
+    height: 48px;
+    margin-left: 32px;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.navbar-esquerda{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 56px !important;
+}
+
+.navbar-esquerda-segundo-li{
+    margin-top: 44px;
+}
+
+.navbar-esquerda-outros-li{
+    margin-top: 24px;
+}
