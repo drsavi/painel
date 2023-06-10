@@ -23,14 +23,20 @@ use App\Http\Controllers\AuthController;
 Route::get('/', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/', [AuthController::class, 'processLogin']);
 
+
 Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [AuthController::class, 'processRegistration'])->name('register');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
+
 Route::get('/home', [HomeController::class, 'showHomePage'])->name('home');
 Route::get('/extratos', [ExtratoController::class, 'showExtratosPage'])->name('extratos');
 Route::get('/capturas', [CapturaController::class, 'showCapturasPage'])->name('capturas');
+
+
 Route::get('/clientes', [ClienteController::class, 'showClientesPage'])->name('clientes');
+Route::get('/clientes/cadastrar', [ClienteController::class, 'showCadastrarClientesPage'])->name('clientes/cadastrar');
+Route::post('/clientes/cadastrar', [ClienteController::class, 'processCadastrarClientes'])->name('clientes/cadastrar');
 
 
 Route::get('/usuarios', [UsuarioController::class, 'showUsuariosPage'])->name('usuarios');

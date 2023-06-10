@@ -10,11 +10,9 @@ class Cliente extends Model
     use HasFactory;
 
     protected $fillable = [
-        'codigo',
         'nome',
         'cnpj',
-        'uf',
-        'id_questor',
+        'idQuestor',
         'status'
     ];
 }

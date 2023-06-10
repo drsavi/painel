@@ -4,14 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class UsuarioController extends Controller
 {
     public function showUsuariosPage()
     {
-        $usuarios = User::all(); // Obtenha os usuários do banco de dados ou de qualquer outra fonte
+        $usuarios = User::all();
 
         return view('screens.usuarios', ['usuarios' => $usuarios]);
     }
@@ -23,7 +22,6 @@ class UsuarioController extends Controller
 
     public function processCadastrarUsuarios(Request $request){
 
-        // Validação dos dados do formulário
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|unique:users|max:255',
@@ -31,9 +29,7 @@ class UsuarioController extends Controller
             'empresa' => 'string',
         ]);
 
-
-        // Cria um novo usuário com os dados do formulário
-        $user = User::create([
+        User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
@@ -42,9 +38,6 @@ class UsuarioController extends Controller
             'empresa' => $request->empresa,
         ]);
 
-        // Redireciona o usuário para a página de dashboard
         return redirect('/usuarios');
     }
-
-
 }
