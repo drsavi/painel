@@ -1,5 +1,6 @@
 @extends('layouts.estrutura')
 
+@section('breadcrumb') Estrutura @endsection
 @section('content')
         <table class="table">
             <thead>

@@ -45,7 +45,7 @@
                             <div id="navbar" class="p-0 mt-0 mb-0 px-32 bg-light d-flex align-items-center">
                                 <a class="nav-link" href="#">
                                     <img src="./assets/images/ico/la-home.png" width="16" height="16" class="d-inline-block" alt="">
-                                    <span class="ms-2 text-black"> Início</span>
+                                    <span class="ms-2 text-black"> @yield('breadcrumb') </span>
                                 </a>
                             </div>
 
