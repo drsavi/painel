@@ -30,7 +30,7 @@
 
         <div class="col">
             <div class="row">
-                <div class="col-lg-12 m-0 p-0">
+                <div class="col-lg-12 m-0 p-0 borda-inferior">
 
                     <!-- Navbar vertical na parte superior direita -->
                     <nav class="navbar navbar-expand-lg navbar-light bg-light p-0">
@@ -45,7 +45,7 @@
                             <div id="navbar" class="p-0 mt-0 mb-0 px-32 bg-light d-flex align-items-center">
                                 <a class="nav-link" href="#">
                                     <img src="./assets/images/ico/la-home.png" width="16" height="16" class="d-inline-block" alt="">
-                                    <span class="ms-2 text-black"> @yield('breadcrumb') </span>
+                                    <span class="ms-2 text-black"> @yield('breadcrumb')</span>
                                 </a>
                             </div>
 
