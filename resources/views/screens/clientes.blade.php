@@ -6,7 +6,7 @@
 @section('breadcrumb') Clientes @endsection
 @section('content')
 
-    <body class="m-0">
+<body class="m-0">
     <div class="teste">
         <div class="container-fluid">
             <div class="mx-4 mt-4 tabela-usuario">

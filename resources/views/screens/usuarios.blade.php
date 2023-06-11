@@ -17,13 +17,13 @@
 
                     <table class="table table-bordered table-striped">
                         <thead class="">
-                            <tr>
-                                <th class="align-middle">Cliente</th>
-                                <th class="align-middle">Nome</th>
-                                <th class="align-middle">E-mail</th>
-                                <th class="align-middle">Status</th>
-                                <th class="align-middle col-lg-2"></th>
-                            </tr>
+                        <tr>
+                            <th class="align-middle">Cliente</th>
+                            <th class="align-middle">Nome</th>
+                            <th class="align-middle">E-mail</th>
+                            <th class="align-middle">Status</th>
+                            <th class="align-middle col-lg-2"></th>
+                        </tr>
                         </thead>
 
                         <tbody>
@@ -36,7 +36,7 @@
                                     <td>STATUS</td>
                                     <td>
                                         <a class="btn"><img src="./assets/images/ico/la-pen.png" width="16" height="16" class="d-inline-block" title="Editar" alt="Editar"></a>
-                                        <button onclick="confirmDelete({{ $usuario->id }})"><img src="./assets/images/ico/la-trash.png" width="16" height="16" class="d-inline-block" title="Excluir" alt="Excluir"></button>
+                                        <button class="btn" onclick="confirmDelete({{ $usuario->id }})"><img src="./assets/images/ico/la-trash.png" width="16" height="16" class="d-inline-block" title="Excluir" alt="Excluir"></button>
                                     </td>
                                 </tr>
                             @endforeach
