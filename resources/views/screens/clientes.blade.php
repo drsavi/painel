@@ -36,7 +36,7 @@
                                     <td>{{ $cliente->status }}</td>
                                     <td>
                                         <a class="btn"><img src="./assets/images/ico/la-pen.png" width="16" height="16" class="d-inline-block" title="Editar" alt="Editar"></a>
-                                        <button onclick="confirmDelete({{ $cliente->id }})"><img src="./assets/images/ico/la-trash.png" width="16" height="16" class="d-inline-block" title="Excluir" alt="Excluir"></button>
+                                        <button class="btn" onclick="confirmDelete({{ $cliente->id }})"><img src="./assets/images/ico/la-trash.png" width="16" height="16" class="d-inline-block" title="Excluir" alt="Excluir"></button>
                                     </td>
                                 </tr>
                             @endforeach
