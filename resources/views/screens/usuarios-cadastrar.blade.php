@@ -106,14 +106,12 @@
 
                                 <div class="col-md-12">
                                     <select id="empresa" class="form-control" name="empresa">
-
-                                        @foreach ($clientes as $cliente)
-                                            <option value="{{ $cliente->id }}">{{ $cliente->nome }}</option>
-                                        @endforeach
-                                        @if(isset($clientes))
-
-                                        @else
+                                        @if($clientes->isEmpty())
                                             <option>Não há clientes cadastrados</option>
+                                        @else
+                                            @foreach ($clientes as $cliente)
+                                                <option value="{{ $cliente->id }}">{{ $cliente->nome }}</option>
+                                            @endforeach
                                         @endif
 
                                     </select>
