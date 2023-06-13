@@ -13,7 +13,6 @@
 
     <!-- CSS -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/capturas.css">
 
     <!-- JS -->
@@ -25,7 +24,7 @@
         <div class="mx-4 mt-4 tabela-usuario">
             <div class="ml-4 rounded border border-secondary">
                 <div class="h3 p-3 border-bottom border-secondary">
-                    <strong>Status Captura</strong>
+                    <strong>Status Capturas</strong>
                 </div>
 
                 <table class="table table-bordered table-striped">
