@@ -29,10 +29,18 @@
                     @if(isset($usuarios))
                         @foreach ($usuarios as $usuario)
                             <tr>
-                                <td>CLIENTE</td>
+                                <td>@foreach ($usuario->clientes as $cliente)
+
+                                        {{ $cliente->nome }}
+                                    @endforeach</td>
                                 <td>{{ $usuario->nome }}</td>
                                 <td>{{ $usuario->email }}</td>
-                                <td>STATUS</td>
+                                <td>@if($usuario->status == "1")
+                                        Ativo
+                                    @else
+                                        Inativo
+                                    @endif
+                                </td>
                                 <td>
                                     <a class="btn"><img src="./assets/images/ico/la-pen.png" width="16" height="16" class="d-inline-block" title="Editar" alt="Editar"></a>
                                     <button class="btn" onclick="confirmDelete({{ $usuario->id }})"><img src="./assets/images/ico/la-trash.png" width="16" height="16" class="d-inline-block" title="Excluir" alt="Excluir"></button>
