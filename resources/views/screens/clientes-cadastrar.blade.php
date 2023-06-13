@@ -73,12 +73,24 @@
                         <div class="row px-0 pt-4">
                             <div class="col-10"></div>
                             <div class="col-2 mt-2 p-0">
-                                <button type="" class="btn ml-auto">
-                                    <p class="h5 d-inline"> <img src="/assets/images/ico/la-undo.png" width="20" height="20" class="d-inline-block" title="Voltar" alt="Voltar"> {{ __('Voltar') }} </p>
-                                </button>
-                                <button type="submit" class="btn ml-auto">
-                                    <p class="h5 d-inline"> <img src="/assets/images/ico/la-save.png" width="20" height="20" class="d-inline-block" title="Salvar" alt="Salvar"> {{ __('Salvar') }} </p>
-                                </button>
+                                @component('components.button', [
+                                    'type' => 'button',
+                                    'onClick' => 'history.back()',
+                                    'image' => '/assets/images/ico/la-undo.png',
+                                    'title' => 'Voltar',
+                                    'alt' => 'Voltar',
+                                    'label' => __('Voltar')
+                                ])
+                                @endcomponent
+                                @component('components.button', [
+                                    'type' => 'submit',
+                                    'onClick' => '',
+                                    'image' => '/assets/images/ico/la-save.png',
+                                    'title' => 'Salvar',
+                                    'alt' => 'Salvar',
+                                    'label' => __('Salvar')
+                                ])
+                                @endcomponent
                             </div>
                         </div>
                     </form>
