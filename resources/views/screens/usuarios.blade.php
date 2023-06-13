@@ -14,6 +14,10 @@
                     <strong>Usuários</strong>
                 </div>
 
+                <div>
+                    <a href="{{ route('usuarios/cadastrar') }}" class="btn btn-primary float-right">Adicionar Usuário</a>
+                </div>
+
                 <table class="table table-bordered table-striped">
                     <thead class="">
                     <tr>
