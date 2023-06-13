@@ -39,6 +39,6 @@ class Usuario extends Authenticatable
      */
     public function clientes()
     {
-        return $this->belongsToMany(Cliente::class, 'usuarios_clientes', 'id_usuario', 'id_cliente');
+        return $this->belongsToMany(Cliente::class, 'usuarios_clientes', 'usuario_id', 'cliente_id');
     }
 }
