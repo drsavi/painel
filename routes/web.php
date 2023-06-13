@@ -42,5 +42,8 @@ Route::post('/clientes/cadastrar', [ClienteController::class, 'processCadastrarC
 Route::get('/usuarios', [UsuarioController::class, 'showUsuariosPage'])->name('usuarios');
 Route::get('/usuarios/cadastrar', [UsuarioController::class, 'showCadastrarUsuariosPage'])->name('usuarios/cadastrar');
 Route::post('/usuarios/cadastrar', [UsuarioController::class, 'processCadastrarUsuarios'])->name('usuarios/cadastrar');
+Route::delete('/usuarios/{usuario}', [UsuarioController::class, 'destroy'])->name('usuarios.destroy');
+
+
 
 

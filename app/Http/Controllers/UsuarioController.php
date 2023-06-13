@@ -47,4 +47,13 @@ class UsuarioController extends Controller
 
         return redirect('/usuarios');
     }
+
+    public function destroy(Usuario $usuario)
+    {
+        if ($usuario->clientes->count() > 0) {
+            UsuariosClientes::where('usuario_id', $usuario->id)->delete();
+        }
+
+        $usuario->delete();
+    }
 }

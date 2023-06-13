@@ -43,7 +43,11 @@
                                 </td>
                                 <td>
                                     <a class="btn"><img src="./assets/images/ico/la-pen.png" width="16" height="16" class="d-inline-block" title="Editar" alt="Editar"></a>
-                                    <button class="btn" onclick="confirmDelete({{ $usuario->id }})"><img src="./assets/images/ico/la-trash.png" width="16" height="16" class="d-inline-block" title="Excluir" alt="Excluir"></button>
+                                    <button class="btn" onclick="confirmDelete({{ $usuario->id }})">
+                                        <img src="./assets/images/ico/la-trash.png" width="16" height="16" class="d-inline-block" title="Excluir" alt="Excluir">
+                                    </button>
+
+
                                 </td>
                             </tr>
                         @endforeach
@@ -55,5 +59,15 @@
         </div>
     </div>
 </body>
+<script>
+    function confirmDelete(usuarioId) {
+        if (confirm('Tem certeza de que deseja excluir este usuário?')) {
+            axios.delete(`/usuarios/${usuarioId}`)
+                .then(function(response) {
+                    location.reload();
+                })
+        }
+    }
+</script>
 
 @endsection
