@@ -19,9 +19,9 @@
 
                     <form method="POST" action="{{ route('clientes/cadastrar') }}">
                         @csrf
-                        <div class="row">
+                        <div class="row px-3">
 
-                            <div class="col-4">
+                            <div class="col-3">
                                 <label for="nome" class="col-md-4 col-form-label text-md-right">{{ __('Nome do Cliente') }}</label>
 
                                 <div class="col-md-12">
@@ -57,7 +57,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-2">
+                            <div class="col-3">
                                 <div class="form-group row">
                                     <label for="status" class="col-md-12 col-form-label text-md-right">{{ __('Status') }}</label>
                                     <div class="col-md-12">
@@ -87,4 +87,5 @@
         </div>
     </div>
 </body>
+
 @endsection
