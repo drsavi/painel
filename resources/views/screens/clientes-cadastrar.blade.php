@@ -12,7 +12,7 @@
         <div class="mx-4 mt-4 tabela-usuario">
             <div class="ml-4 rounded border border-secondary">
                 <div class="ml-4 rounded border border-secondary">
-                    
+
                     <div class="h3 p-3 border-bottom border-secondary">
                         <strong>Adicionar Clientes</strong>
                     </div>
@@ -22,7 +22,7 @@
                         <div class="row">
 
                             <div class="col-4">
-                                <label for="nome" class="col-md-4 col-form-label text-md-right">{{ __('Nome do Usuário') }}</label>
+                                <label for="nome" class="col-md-4 col-form-label text-md-right">{{ __('Nome do Cliente') }}</label>
 
                                 <div class="col-md-12">
                                     <input id="nome" type="text" class="form-control @error('nome') is-invalid @enderror" name="nome" value="{{ old('nome') }}" required autocomplete="nome">

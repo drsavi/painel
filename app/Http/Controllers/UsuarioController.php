@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use App\Models\Cliente;
+use App\Models\Usuario;
+use App\Models\UsuariosClientes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -10,33 +12,38 @@ class UsuarioController extends Controller
 {
     public function showUsuariosPage()
     {
-        $usuarios = User::all();
-
+        $usuarios = Usuario::all();
         return view('screens.usuarios', ['usuarios' => $usuarios]);
     }
 
     public function showCadastrarUsuariosPage()
     {
-        return view('screens.usuarios-cadastrar');
+        $clientes = Cliente::all();
+        return view('screens.usuarios-cadastrar', ['clientes' => $clientes]);
     }
 
     public function processCadastrarUsuarios(Request $request){
 
         $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|unique:users|max:255',
-            'password' => 'required|string|min:6|max:255|confirmed',
-            'empresa' => 'string',
+            'nome' => 'required|string|max:255',
+            'email' => 'required|string|email|unique:usuarios|max:255',
+            'senha' => 'required|string|min:6|max:255|confirmed',
         ]);
 
-        User::create([
-            'name' => $request->name,
+        $usuario = Usuario::create([
+            'nome' => $request->nome,
             'email' => $request->email,
-            'password' => Hash::make($request->password),
+            'senha' => Hash::make($request->senha),
             'status' => $request->status,
             'admin' => $request->admin,
-            'empresa' => $request->empresa,
         ]);
+
+        if($request->empresa !== "Não há clientes cadastrados"){
+            UsuariosClientes::create([
+                'usuario_id' => $usuario->id,
+                'cliente_id' => $request->empresa
+            ]);
+        }
 
         return redirect('/usuarios');
     }

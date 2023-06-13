@@ -15,4 +15,12 @@ class Cliente extends Model
         'idQuestor',
         'status'
     ];
+
+    /**
+     * The users that belong to the client.
+     */
+    public function usuarios()
+    {
+        return $this->belongsToMany(Usuario::class, 'usuarios_clientes', 'id_cliente', 'id_usuario');
+    }
 }

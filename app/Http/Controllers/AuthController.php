@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use App\Models\Usuario;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -16,7 +16,7 @@ class AuthController extends Controller
 
     public function processLogin(Request $request)
     {
-        $credentials = $request->only('email', 'password');
+        $credentials = $request->only('email', 'senha');
 
         if (Auth::attempt($credentials)) {
             // Autenticação bem-sucedida, redireciona para a página inicial do usuário
@@ -36,16 +36,16 @@ class AuthController extends Controller
     {
         // Validação dos dados do formulário
         $request->validate([
-            'name' => 'required|string|max:255',
+            'nome' => 'required|string|max:255',
             'email' => 'required|string|email|unique:users|max:255',
-            'password' => 'required|string|min:8|max:255|confirmed',
+            'senha' => 'required|string|min:8|max:255|confirmed',
         ]);
 
         // Cria um novo usuário com os dados do formulário
-        $user = User::create([
-            'name' => $request->name,
+        $user = Usuario::create([
+            'nome' => $request->nome,
             'email' => $request->email,
-            'password' => Hash::make($request->password),
+            'senha' => Hash::make($request->senha),
         ]);
 
         // Faz o login do usuário recém-criado

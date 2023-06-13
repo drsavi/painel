@@ -29,8 +29,8 @@
                     @if(isset($usuarios))
                         @foreach ($usuarios as $usuario)
                             <tr>
-                                <td>CLIENTE</td>                        
-                                <td>{{ $usuario->name }}</td>
+                                <td>CLIENTE</td>
+                                <td>{{ $usuario->nome }}</td>
                                 <td>{{ $usuario->email }}</td>
                                 <td>STATUS</td>
                                 <td>
