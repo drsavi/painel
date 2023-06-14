@@ -76,7 +76,7 @@
                                 @component('components.button', [
                                     'type' => 'button',
                                     'onClick' => 'history.back()',
-                                    'image' => '/assets/images/ico/la-undo.png',
+                                    'image' => '/assets/images/ico/la-undo.svg',
                                     'title' => 'Voltar',
                                     'alt' => 'Voltar',
                                     'label' => __('Voltar')
@@ -85,7 +85,7 @@
                                 @component('components.button', [
                                     'type' => 'submit',
                                     'onClick' => '',
-                                    'image' => '/assets/images/ico/la-save.png',
+                                    'image' => '/assets/images/ico/la-save.svg',
                                     'title' => 'Salvar',
                                     'alt' => 'Salvar',
                                     'label' => __('Salvar')

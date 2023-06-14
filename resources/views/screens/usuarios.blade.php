@@ -48,9 +48,9 @@
                                     @endif
                                 </td>
                                 <td>
-                                    <a class="btn"><img src="./assets/images/ico/la-pen.png" width="16" height="16" class="d-inline-block" title="Editar" alt="Editar"></a>
+                                    <a class="btn"><img src="./assets/images/ico/la-pen.svg" width="16" height="16" class="d-inline-block" title="Editar" alt="Editar"></a>
                                     <button class="btn" onclick="confirmDelete({{ $usuario->id }})">
-                                        <img src="./assets/images/ico/la-trash.png" width="16" height="16" class="d-inline-block" title="Excluir" alt="Excluir">
+                                        <img src="./assets/images/ico/la-trash.svg" width="16" height="16" class="d-inline-block" title="Excluir" alt="Excluir">
                                     </button>
 
 
