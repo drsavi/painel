@@ -14,8 +14,10 @@
                     <strong>Usuários</strong>
                 </div>
 
-                <div>
-                    <a href="{{ route('usuarios/cadastrar') }}" class="btn btn-primary float-right">Adicionar Usuário</a>
+                <div class="p-3 justify-content-end">
+                    <a href="{{ route('usuarios/cadastrar') }}" class="btn float-end" title="Adicionar Usuários" >
+                        <img src="./assets/images/ico/la-plus.svg" width="20" height="20" class="d-inline-block" alt="Adicionar Usuários"><i class="h5 d-inline-block"> Adicionar Novo Usuário </i>
+                    </a>
                 </div>
 
                 <table class="table table-bordered table-striped">
