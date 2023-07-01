@@ -1,0 +1,4 @@
+FROM postgres:15
+ENV POSTGRES_PASSWORD potgrespw
+ENV POSTGRES_DB painelcnd
+EXPOSE 5432
