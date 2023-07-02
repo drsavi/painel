@@ -24,13 +24,13 @@
                     </thead>
 
                     <tbody>
-                    @if(isset($clientes))
-                        @foreach ($clientes as $cliente)
+                    @if(isset($extratos))
+                        @foreach ($extratos as $extrato)
                             <tr>
-                                <td>{{ $cliente->nome }}</td>
-                                <td>{{ $cliente->cnpj }}</td>
-                                <td>{{ $cliente->idQuestor }}</td>
-                                <td>{{ $cliente->status }}</td>
+                                <td>{{ $extrato->certidao }}</td>
+                                <td>{{ $extrato->competencia }}</td>
+                                <td>{{ $extrato->quantidadecnd }}</td>
+                                <td>{{ $extrato->quantidadecnpj }}</td>
                             </tr>
                         @endforeach
                     @endif

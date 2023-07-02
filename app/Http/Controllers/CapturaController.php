@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Captura;
 
 class CapturaController extends Controller
 {
     public function showCapturasPage()
     {
-        return view('screens.capturas');
+        $capturas = Captura::all();
+        return view('screens.capturas', ['capturas' => $capturas]);
     }
 }
