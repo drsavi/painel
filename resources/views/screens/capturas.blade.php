@@ -1,38 +1,24 @@
 @extends('layouts.estrutura')
 
-@section('breadcrumb') Clientes @endsection
+@section('breadcrumb') Status Captura @endsection
 @section('content')
 
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- CSS -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/capturas.css">
-
-    <!-- JS -->
-    <script src="{{ asset('js/app.js') }}"></script>
-</head>
+<link rel="stylesheet" href="/assets/css/capturas.css">
 
 <body class="m-0">
     <div class="container-fluid">
         <div class="mx-4 mt-4 tabela-usuario">
             <div class="ml-4 rounded border border-secondary">
                 <div class="h3 p-3 border-bottom border-secondary">
-                    <strong>Status Capturas</strong>
+                    <strong>Status Captura</strong>
                 </div>
 
                 <table class="table table-bordered table-striped">
                     <thead class="">
                     <tr>
-                        <th class="align-middle">Nome</th>
-                        <th class="align-middle">CNPJ</th>
-                        <th class="align-middle">ID Questor</th>
+                        <th class="align-middle">Certidão</th>
+                        <th class="align-middle">Categoria</th>
+                        <th class="align-middle">UF</th>
                         <th class="align-middle">Status</th>
                         <th class="align-middle col-lg-2"></th>
                     </tr>
