@@ -48,12 +48,12 @@
                         </div>
 
                         <div class="col-2">
-                            <label for="senha" class="col-md-12 col-form-label text-md-right">{{ __('Senha') }}</label>
+                            <label for="password" class="col-md-12 col-form-label text-md-right">{{ __('Senha') }}</label>
 
                             <div class="col-md-12">
-                                <input id="senha" type="password" class="form-control @error('senha') is-invalid @enderror" name="senha" required autocomplete="new-senha">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
-                                @error('senha')
+                                @error('password')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -63,10 +63,10 @@
 
                         <div class="col-2">
                             <div class="col-md-12">
-                                <label for="senha-confirm" class="col-md-12 col-form-label text-md-right">{{ __('Confirmar Senha') }}</label>
+                                <label for="password-confirm" class="col-md-12 col-form-label text-md-right">{{ __('Confirmar Senha') }}</label>
 
                                 <div class="col-md-12">
-                                    <input id="senha-confirm" type="password" class="form-control" name="senha_confirmation" required autocomplete="new-senha">
+                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                                 </div>
                             </div>
                         </div>

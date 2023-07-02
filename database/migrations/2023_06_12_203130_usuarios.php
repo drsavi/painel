@@ -17,7 +17,7 @@ class Usuarios extends Migration
             $table->id();
             $table->string('email')->unique();
             $table->string('nome');
-            $table->string('senha');
+            $table->string('password');
             $table->boolean('status')->default(false);
             $table->boolean('admin')->default(false);
             $table->timestamps();

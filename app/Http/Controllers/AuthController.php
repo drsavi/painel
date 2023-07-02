@@ -16,7 +16,7 @@ class AuthController extends Controller
 
     public function processLogin(Request $request)
     {
-        $credentials = $request->only('email', 'senha');
+        $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
             // Autenticação bem-sucedida, redireciona para a página inicial do usuário
@@ -38,14 +38,14 @@ class AuthController extends Controller
         $request->validate([
             'nome' => 'required|string|max:255',
             'email' => 'required|string|email|unique:users|max:255',
-            'senha' => 'required|string|min:8|max:255|confirmed',
+            'password' => 'required|string|min:8|max:255|confirmed',
         ]);
 
         // Cria um novo usuário com os dados do formulário
         $user = Usuario::create([
             'nome' => $request->nome,
             'email' => $request->email,
-            'senha' => Hash::make($request->senha),
+            'password' => Hash::make($request->password),
         ]);
 
         // Faz o login do usuário recém-criado

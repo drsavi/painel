@@ -27,13 +27,13 @@ class UsuarioController extends Controller
         $request->validate([
             'nome' => 'required|string|max:255',
             'email' => 'required|string|email|unique:usuarios|max:255',
-            'senha' => 'required|string|min:6|max:255|confirmed',
+            'password' => 'required|string|min:6|max:255|confirmed',
         ]);
 
         $usuario = Usuario::create([
             'nome' => $request->nome,
             'email' => $request->email,
-            'senha' => Hash::make($request->senha),
+            'password' => Hash::make($request->password),
             'status' => $request->status,
             'admin' => $request->admin,
         ]);
