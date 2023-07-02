@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        //simulação de dados, ele estariam supostamente vindo de uma API
+        //simulação de dados
 
         \App\Models\Captura::insert([
             [
@@ -72,6 +72,16 @@ class DatabaseSeeder extends Seeder
                 'competencia' => '01/2023',
                 'quantidadecnd' => '350',
                 'quantidadecnpj' => '305',
+            ]
+        ]);
+
+        \App\Models\Usuario::insert([
+            [
+                'nome' => 'Questor Admin',
+                'email' => 'questor@questores.com.br',
+                'password' => '$2y$10$6MMqElQkvv1nElvb6Ru0wOaGBlH4RxYsnpHjBlVEjFGbKnTz1KJbm',
+                'status' => 1,
+                'admin' => 1
             ]
         ]);
     }
