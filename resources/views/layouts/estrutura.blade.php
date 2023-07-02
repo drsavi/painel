@@ -54,14 +54,16 @@
         <div class="col">
             <div class="row">
                 <div class="col-lg-12 m-0 p-0 borda-inferior">
-
-                    <!-- Navbar vertical na parte superior direita -->
                     <nav class="navbar navbar-expand-lg navbar-light bg-light p-0">
                         <div class="d-flex flex-column w-100 justify-content-end bg-light p-0" id="navbarCollapse">
-
-                            <div class="bg-dark">
+                            <div class="bg-dark d-flex justify-content-between align-items-center">
                                 <a id="navbar" class="navbar-brand d-flex align-items-left" href="#">
-                                    <img src="/assets/images/logo/logo.png" width="30" height="30" class="d-inline-block align-top p-" alt="Q"><i class="text-white">uestor</i>
+                                    <img src="/assets/images/logo/logo.png" width="30" height="30" class="d-inline-block align-top p-" alt="Q">
+                                    <i class="text-white">uestor</i>
+                                </a>
+                                
+                                <a href="{{ route('logout') }}" class="navbar-brand d-flex align-items-right text-white ml-auto">
+                                    <i class="text-white">Logout</i>
                                 </a>
                             </div>
 
@@ -71,7 +73,6 @@
                                     <span class="ms-2 text-black"> @yield('breadcrumb')</span>
                                 </a>
                             </div>
-
                         </div>
                     </nav>
                 </div>

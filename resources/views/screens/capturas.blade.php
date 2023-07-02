@@ -20,7 +20,6 @@
                         <th class="align-middle">Categoria</th>
                         <th class="align-middle">UF</th>
                         <th class="align-middle">Status</th>
-                        <th class="align-middle col-lg-2"></th>
                     </tr>
                     </thead>
 
