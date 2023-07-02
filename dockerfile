@@ -49,10 +49,11 @@ RUN apt-get update \
     && apt-get clean
 
 WORKDIR /var/www/html
-COPY .. .
+COPY . .
 
 RUN chown -R www-data:www-data /var/www/html/vendor
 RUN COMPOSER_MEMORY_LIMIT=-1 composer install --no-dev --optimize-autoloader
+
 RUN php artisan key:generate
 RUN php artisan db:seed
 
