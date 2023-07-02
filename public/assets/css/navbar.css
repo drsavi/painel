@@ -27,3 +27,20 @@
 .borda-inferior{
     box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.5);
 }
+
+.logout-icon {
+    display: inline-block;
+    background-color: #E9511D;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    
+}
+  
+.logout-icon i {
+    color: white;
+    font-size: 14px;
+}
+  

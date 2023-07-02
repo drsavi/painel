@@ -62,8 +62,10 @@
                                     <i class="text-white">uestor</i>
                                 </a>
                                 
-                                <a href="{{ route('logout') }}" class="navbar-brand d-flex align-items-right text-white ml-auto">
-                                    <i class="text-white">Logout</i>
+                                <a href="{{ route('logout') }}" class="navbar-brand d-flex align-items-right text-white ml-auto" alt="Sair" title="Sair">
+                                    <div class="logout-icon">
+                                        <i class="text-white">QT</i>
+                                    </div>
                                 </a>
                             </div>
 
