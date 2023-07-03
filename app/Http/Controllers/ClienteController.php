@@ -27,6 +27,10 @@ class ClienteController extends Controller
             'idQuestor' => 'required|string|min:4|max:255',
         ]);
 
+        if($request->status == null){
+            $request->status = false;
+        }
+
         Cliente::create([
             'nome' => $request->nome,
             'cnpj' => $request->cnpj,
