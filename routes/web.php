@@ -22,13 +22,11 @@ use App\Http\Controllers\AuthController;
 
 Route::get('/', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/', [AuthController::class, 'processLogin']);
-
-
 Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [AuthController::class, 'processRegistration'])->name('register');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
-
+Route::middleware('auth')->group(function () {
 Route::get('/home', [HomeController::class, 'showHomePage'])->name('home');
 Route::get('/extratos', [ExtratoController::class, 'showExtratosPage'])->name('extratos');
 Route::get('/capturas', [CapturaController::class, 'showCapturasPage'])->name('capturas');
@@ -43,7 +41,7 @@ Route::get('/usuarios', [UsuarioController::class, 'showUsuariosPage'])->name('u
 Route::get('/usuarios/cadastrar', [UsuarioController::class, 'showCadastrarUsuariosPage'])->name('usuarios/cadastrar');
 Route::post('/usuarios/cadastrar', [UsuarioController::class, 'processCadastrarUsuarios'])->name('usuarios/cadastrar');
 Route::delete('/usuarios/{usuario}', [UsuarioController::class, 'destroy'])->name('usuarios.destroy');
-
+});
 
 
 
