@@ -19,29 +19,28 @@ use App\Http\Controllers\AuthController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::middleware('auth')->group(function () {
+    Route::get('/home', [HomeController::class, 'showHomePage'])->name('home');
+    Route::get('/extratos', [ExtratoController::class, 'showExtratosPage'])->name('extratos');
+    Route::get('/capturas', [CapturaController::class, 'showCapturasPage'])->name('capturas');
+
+
+    Route::get('/clientes', [ClienteController::class, 'showClientesPage'])->name('clientes');
+    Route::get('/clientes/cadastrar', [ClienteController::class, 'showCadastrarClientesPage'])->name('clientes/cadastrar');
+    Route::post('/clientes/cadastrar', [ClienteController::class, 'processCadastrarClientes'])->name('clientes/cadastrar');
+    Route::delete('/clientes/{cliente}', [UsuarioController::class, 'destroy'])->name('clientes.destroy');
+
+
+    Route::get('/usuarios', [UsuarioController::class, 'showUsuariosPage'])->name('usuarios');
+    Route::get('/usuarios/cadastrar', [UsuarioController::class, 'showCadastrarUsuariosPage'])->name('usuarios/cadastrar');
+    Route::post('/usuarios/cadastrar', [UsuarioController::class, 'processCadastrarUsuarios'])->name('usuarios/cadastrar');
+    Route::delete('/usuarios/{usuario}', [UsuarioController::class, 'destroy'])->name('usuarios.destroy');
+});
 
 Route::get('/', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/', [AuthController::class, 'processLogin']);
 Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [AuthController::class, 'processRegistration'])->name('register');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-
-Route::middleware('auth')->group(function () {
-Route::get('/home', [HomeController::class, 'showHomePage'])->name('home');
-Route::get('/extratos', [ExtratoController::class, 'showExtratosPage'])->name('extratos');
-Route::get('/capturas', [CapturaController::class, 'showCapturasPage'])->name('capturas');
-
-
-Route::get('/clientes', [ClienteController::class, 'showClientesPage'])->name('clientes');
-Route::get('/clientes/cadastrar', [ClienteController::class, 'showCadastrarClientesPage'])->name('clientes/cadastrar');
-Route::post('/clientes/cadastrar', [ClienteController::class, 'processCadastrarClientes'])->name('clientes/cadastrar');
-
-
-Route::get('/usuarios', [UsuarioController::class, 'showUsuariosPage'])->name('usuarios');
-Route::get('/usuarios/cadastrar', [UsuarioController::class, 'showCadastrarUsuariosPage'])->name('usuarios/cadastrar');
-Route::post('/usuarios/cadastrar', [UsuarioController::class, 'processCadastrarUsuarios'])->name('usuarios/cadastrar');
-Route::delete('/usuarios/{usuario}', [UsuarioController::class, 'destroy'])->name('usuarios.destroy');
-});
-
 
 

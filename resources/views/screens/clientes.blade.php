@@ -53,4 +53,14 @@
         </div>
     </div>
 </body>
+<script>
+    function confirmDelete(clienteId) {
+        if (confirm('Tem certeza de que deseja excluir este cliente?')) {
+            axios.delete(`/clientes/${clienteId}`)
+                .then(function(response) {
+                    location.reload();
+                })
+        }
+    }
+</script>
 @endsection
