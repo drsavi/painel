@@ -14,6 +14,12 @@
                     <strong>Clientes</strong>
                 </div>
 
+                <div class="p-1 justify-content-end">
+                    <a href="{{ route('clientes/cadastrar') }}" class="btn float-end" title="Adicionar Clientes" >
+                        <img src="./assets/images/ico/la-plus.svg" width="20" height="20" class="d-inline-block" alt="Adicionar Usuários"><i class="h6 d-inline-block"> Adicionar Novo Cliente </i>
+                    </a>
+                </div>
+
                 <table class="table table-bordered table-striped">
                     <thead class="">
                     <tr>
