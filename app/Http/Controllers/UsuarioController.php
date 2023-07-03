@@ -30,6 +30,14 @@ class UsuarioController extends Controller
             'password' => 'required|string|min:6|max:255|confirmed',
         ]);
 
+        if($request->admin == null){
+            $request->admin = false;
+        }
+
+        if($request->status == null){
+            $request->status = false;
+        }
+        
         $usuario = Usuario::create([
             'nome' => $request->nome,
             'email' => $request->email,
