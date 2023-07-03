@@ -38,7 +38,7 @@
                                 <td>{{ $cliente->nome }}</td>
                                 <td>{{ $cliente->cnpj }}</td>
                                 <td>{{ $cliente->idQuestor }}</td>
-                                <td>{{ $cliente->status }}</td>
+                                <td>{{ $cliente->status == true ? 'Ativo' : 'Inativo' }}</td>
                                 <td>
                                     <a class="btn"><img src="./assets/images/ico/la-pen.svg" width="16" height="16" class="d-inline-block" title="Editar" alt="Editar"></a>
                                     <button class="btn" onclick="confirmDelete({{ $cliente->id }})"><img src="./assets/images/ico/la-trash.svg" width="16" height="16" class="d-inline-block" title="Excluir" alt="Excluir"></button>
